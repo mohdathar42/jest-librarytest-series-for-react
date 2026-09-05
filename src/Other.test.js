@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import App from './App';
 
  
-test('renders input element', () => {
+test('Other renders input element', () => {
   render(<App />);
   //always used to test input element is getByRole('textbox')
   const inputTextElement=screen.getByRole('textbox');
