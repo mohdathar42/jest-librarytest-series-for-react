@@ -53,3 +53,10 @@ take a button and onclick event then fireEvent.click(btn) then expect(screen.get
 
 # test case file naming convention
 __tests__  in thi folder all files considered as test files without .test.js,.spec.js extension
+
+
+# before ad after hooks in jest library
+beforeAll(fn)
+afterAll(fn)
+beforeEach(fn)
+afterEach(fn)
