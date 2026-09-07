@@ -42,5 +42,14 @@ just write skip after describe keyword like this describe.skip(name of group,()=
 just write only after describe keyword describe.only(name of group,()=>{test case 1......})
 
 
-# How to create nested describe function means 
+# How to create nested describe function 
 one describe function inside other describe function
+
+# test on change event 
+take one input box set initial value empty string then use usestate to change the value dynamically
+
+# test click event
+take a button and onclick event then fireEvent.click(btn) then expect(screen.getByText("update")).toBeInTheDocument();
+
+# test case file naming convention
+__tests__  in thi folder all files considered as test files without .test.js,.spec.js extension
