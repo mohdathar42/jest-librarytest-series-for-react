@@ -1,16 +1,19 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import App from './App';
 
- 
-test('renders input element', () => {
-  render(<App />);
-  //always used to test input element is getByRole('textbox')
-  const inputTextElement=screen.getByRole('textbox');
-  const placeholderCheck=screen.getByPlaceholderText(/Enter your name/i);
-  expect(inputTextElement).toBeInTheDocument();
-  expect(placeholderCheck).toBeInTheDocument();
-  expect(inputTextElement).toHaveAttribute('name','username');
-  expect(inputTextElement).toHaveAttribute('id','name');
-  expect(inputTextElement).toHaveAttribute('type','text');
-//  expect(inputTextElement).toHaveAttribute('value','username4');
+
+// test("testing onchange event for input element", () => {
+//   render(<App />);
+//   const input = screen.getByRole("textbox");
+//   expect(input).toBeInTheDocument();
+//   fireEvent.change(input, { target: { value: "a" } });
+//   expect(input.value).toBe("a");
+// });
+
+test("testing click event with button",()=>{
+  render(<App/>);
+  const btn=screen.getByRole("button");
+  expect(btn).toBeInTheDocument();
+  fireEvent.click(btn);
+  expect(screen.getByText("updated data")).toBeInTheDocument();
 });
