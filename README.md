@@ -60,3 +60,8 @@ beforeAll(fn)
 afterAll(fn)
 beforeEach(fn)
 afterEach(fn)
+
+# create snapshots for code
+it is useful when you mistakenly change in your code just before going to production
+const {container}=render(<App/>);
+expect(container).toMatchSnapshot();
